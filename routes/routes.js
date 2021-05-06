@@ -2,7 +2,7 @@ const Router = require("express").Router();
 const request = require("request");
 
 Router.get("/", (req, res) => {
-  console.log(req);
+  // console.log(req);
   res.render("index", { page: "index" });
 });
 
