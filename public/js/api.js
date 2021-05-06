@@ -106,7 +106,7 @@ $(document).ready(() => {
   });
 
   //get latitude and longitude
-  var getPosition = {
+  let getPosition = {
     enableHighAccuracy: false,
     timeout: 9000,
     maximumAge: 0,
@@ -118,7 +118,7 @@ $(document).ready(() => {
     preloader.removeClass("on");
 
     // console.log(`${uLat}`, `${uLon}`);
-    if (uLat == null || uLon == null || preloader.hasClass("on")) {
+    if (uLat == null || uLon == null ) {
       // alert("GPS not activated!");
       let error = $("#err");
       error.html("Please enable the GPS.");
@@ -315,7 +315,7 @@ $(document).ready(() => {
   navigator.geolocation.getCurrentPosition(success, error, getPosition);
 
   function error(err) {
-    if (uLat == null || uLon == null || preloader.hasClass("on")) {
+    if (uLat == null || uLon == null ) {
       let error = $("#err");
       error.html("Please enable the GPS.");
       popup.addClass("show");
