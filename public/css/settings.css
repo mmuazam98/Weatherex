@@ -1,3 +1,7 @@
+#settings {
+  position: relative;
+  min-height: 100vh;
+}
 #settings svg {
   fill: var(--white-bg);
   position: absolute;
