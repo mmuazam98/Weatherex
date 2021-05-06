@@ -90,16 +90,15 @@ $(document).ready(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       lng = position.coords.longitude;
       lat = position.coords.latitude;
+      if (lng == null || lat == null) {
+        // alert("GPS not activated!");
+        let error = $("#err");
+        error.html("Please enable the GPS.");
+        popup.addClass("show");
+      } else {
+        popup.removeClass("show");
+      }
     });
-
-    if (lng == null || lat == null) {
-      // alert("GPS not activated!");
-      let error = $("#err");
-      error.html("Please enable the GPS.");
-      popup.addClass("show");
-    } else {
-      popup.removeClass("show");
-    }
   };
   checkGPS();
   //get latitude and longitude
@@ -114,14 +113,14 @@ $(document).ready(() => {
         popup.removeClass("show");
 
         // console.log(`${uLat}`, `${uLon}`);
-        if (uLat == 0 || uLon == 0) {
-          // alert("GPS not activated!");
-          let error = $("#err");
-          error.html("Please enable the GPS.");
-          popup.addClass("show");
-        } else {
-          popup.removeClass("show");
-        }
+        // if (uLat == 0 || uLon == 0) {
+        // alert("GPS not activated!");
+        //   let error = $("#err");
+        //   error.html("Please enable the GPS.");
+        //   popup.addClass("show");
+        // } else {
+        //   popup.removeClass("show");
+        // }
         const settings = {
           async: true,
           crossDomain: true,
