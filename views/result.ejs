@@ -1,0 +1,87 @@
+<%- include("partials/header") %> 
+<%- include("partials/nav") %> 
+<section id="home" class="section">
+    <!-- <img src="moon.svg" alt="" /> -->
+    <!-- heading  -->
+    <% let location = result.location,data=result.current,forecast=result.forecast%> 
+    <div class="name">
+      <span id="name"><%= location.name %></span>, <span id="country"><%= location.region %></span>
+      <i class="far fa-angle-down arrow" id="show-time" aria-hidden="true"></i>
+      <p id="time" class="hide"><%= location.localtime %> </p>
+    </div>
+    <!-- main container  -->
+    <div class="container-main">
+      <div class="icon">
+        <img id="icon" alt="icon" src="<%= data.condition.icon %> " />
+      </div>
+
+      <div class="desc">
+        <span id="desc"><%= data.condition.text %></span>
+        <div id="note"></div>
+      </div>
+      <div class="temp">
+        <span id="temp"><%= parseInt(data.temp_c) %></span>
+        <small>°</small>
+        <div class="feel">Feels like <span id="feel"><%= data.feelslike_c %></span> °</div>
+      </div>
+    </div>
+    <!-- wind humidity pressure  -->
+    <div class="container-sub">
+      <div class="wind">
+        <p class="sub-heading">Wind <i class="fal fa-wind"></i></p>
+        <p id="wind"><%= data.wind_kph %><span>kph</span></p>
+      </div>
+      <div class="humidity">
+        <p class="sub-heading">Humidity <i class="fal fa-tint"></i></p>
+        <p id="humidity"><%= data.humidity %><span>%</span></p>
+      </div>
+      <div class="pressure">
+        <p class="sub-heading">Pressure <i class="fal fa-tachometer-alt"></i></p>
+        <p id="pressure"><%= data.pressure_in %><span>inHg</span></p>
+      </div>
+    </div>
+    <!-- sunrise sunset   -->
+    <section id="sun">
+      <div class="box"></div>
+      <img src="images/sunrise.png" alt="" id="sunrise" title="Sunrise" height="30" />
+      <p id="sunrise-time"><%= forecast.forecastday[0].astro.sunrise%></p>
+      <img src="images/sunset.png" alt="" id="sunset" title="Sunset" height="35" />
+      <p id="sunset-time"><%= forecast.forecastday[0].astro.sunset%></p>
+    </section>
+    <!-- daily forecast  -->
+    <div class="today">
+      <p id="today">Today</p>
+      <div class="scrolling-wrapper"></div>
+    </div>
+    <div class="chart">
+      <canvas id="myChart" height="230"></canvas>
+    </div>
+    <div class="forecast">
+      <p id="fore">Forecast</p>
+
+      <table id="forecast"></table>
+    </div>
+  </section>
+  <script>
+    let fcst=[],fcst3=[];
+  </script>
+  <% for(let j=0; j<forecast.forecastday[0].hour.length; j++) { %>
+    <script>
+     fcst.push('<%-JSON.stringify(forecast.forecastday[0].hour[j])%>');
+    </script>
+  <%}%>
+  <% for(let j=0; j<forecast.forecastday.length; j++) { %>
+    <script>
+     fcst3.push('<%-JSON.stringify(forecast.forecastday[j])%>');
+    </script>
+  <%}%>
+
+  <script>
+    let fore=[],forecastThree=[];
+    for(let i=0; i<fcst.length; i++)
+     fore.push(JSON.parse(fcst[i]));
+     for(let i=0; i<fcst3.length; i++)
+     forecastThree.push(JSON.parse(fcst3[i]));
+     console.log(fore);
+  </script>
+<%- include("partials/footer") %> 

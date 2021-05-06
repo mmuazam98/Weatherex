@@ -1,0 +1,101 @@
+<%- include("partials/header") %> 
+    <div id="preload-1"></div>
+    <div id="preload-2"></div>
+    <div id="container" id="preloader">
+      <div class="cube" id="cube1"></div>
+      <div class="cube" id="cube2"></div>
+      <div class="cube" id="cube3"></div>
+      <div class="cube" id="cube4"></div>
+      <p id="load">Loading<span id="dots"></span></p>
+    </div>
+
+    <div id="popup">
+      <div id="popup-wrapper" class="popup-container">
+        <div class="popup-content">
+          <span id="close">&times;</span>
+          <p id="err">Please enable the GPS.</p>
+        </div>
+      </div>
+    </div>
+    <section id="home" class="section">
+      <!-- <img src="moon.svg" alt="" /> -->
+      <!-- heading  -->
+      <div class="name">
+        <span id="name"></span><span id="country"></span>
+        <i class="far fa-angle-down arrow" id="show-time" aria-hidden="true"></i>
+        <p id="time" class="hide">2021-03-30 14:09</p>
+      </div>
+      <!-- main container  -->
+      <div class="container-main">
+        <img src="images/moon.svg" alt="icon" class="toggler" />
+
+        <div class="icon">
+          <img id="icon" alt="icon" />
+        </div>
+
+        <div class="desc">
+          <span id="desc"></span>
+          <div id="note"></div>
+        </div>
+        <div class="temp">
+          <span id="temp"></span>
+          <small>°</small>
+          <div class="feel">Feels like <span id="feel"></span>°</div>
+        </div>
+      </div>
+      <!-- wind humidity pressure  -->
+      <div class="container-sub">
+        <div class="wind">
+          <p class="sub-heading">Wind <i class="fal fa-wind"></i></p>
+          <p id="wind"></p>
+        </div>
+        <div class="humidity">
+          <p class="sub-heading">Humidity <i class="fal fa-tint"></i></p>
+          <p id="humidity"></p>
+        </div>
+        <div class="pressure">
+          <p class="sub-heading">Pressure <i class="fal fa-tachometer-alt"></i></p>
+          <p id="pressure"></p>
+        </div>
+      </div>
+      <!-- sunrise sunset   -->
+      <section id="sun">
+        <div class="box"></div>
+        <img src="images/sunrise.png" alt="" id="sunrise" title="Sunrise" height="30" />
+        <p id="sunrise-time">AM</p>
+        <img src="images/sunset.png" alt="" id="sunset" title="Sunset" height="35" />
+        <p id="sunset-time">PM</p>
+      </section>
+      <!-- daily forecast  -->
+      <div class="today">
+        <p id="today">Today</p>
+        <div class="scrolling-wrapper"></div>
+      </div>
+      <div class="chart">
+        <canvas id="myChart" height="230"></canvas>
+      </div>
+      <div class="forecast">
+        <p id="fore">Forecast</p>
+
+        <table id="forecast"></table>
+      </div>
+    </section>
+
+    <!-- navbar  -->
+    <%- include("partials/nav") %>
+    <!-- search page  -->
+    <section id="search" class="section">
+      <section id="search-bar">
+        <div class="wrapper">
+          <div class="search-box">
+            <input type="text" placeholder="Search" class="input active" />
+            <div class="btn">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+<%- include("partials/footer") %> 
+
+   

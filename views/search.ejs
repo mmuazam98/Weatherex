@@ -1,0 +1,22 @@
+<%- include("partials/header") %> 
+<%- include("partials/nav") %> 
+<section id="search" class="section">
+  <section id="search-bar">
+    <div class="wrapper">
+      <div class="search-box">
+        <form action="/search" method="POST" class="search-form">
+          <input type="text" placeholder="Search places" class="input active" name="query" autocomplete="off"/>
+          <div class="btn">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <% if (typeof message !== 'undefined') { %>
+    <p id="error"><%= message %> </p>
+    
+  <% } %>
+
+</section>
+<%- include("partials/footer") %> 

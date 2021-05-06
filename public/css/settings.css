@@ -1,0 +1,15 @@
+#settings svg {
+  fill: var(--white-bg);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#settings p {
+  color: var(--white-bg);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
