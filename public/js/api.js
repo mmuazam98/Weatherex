@@ -21,24 +21,9 @@ $(".name").click(() => {
   if ($(".arrow").hasClass("fa-angle-up")) time.fadeIn(400);
   if ($(".arrow").hasClass("fa-angle-down")) time.fadeOut(400);
 });
-$(".section").fadeOut(400);
-$("#home").fadeIn(100);
-let i = 0;
-let txt = "....";
-let speed = 100;
+// $(".section").fadeOut(400);
+// $("#home").fadeIn(100);
 
-let typeWriter = () => {
-  if (i == 0) document.getElementById("dots").innerHTML = "";
-  if (i < txt.length) {
-    document.getElementById("dots").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  } else {
-    i = 0;
-  }
-};
-typeWriter();
-setInterval(typeWriter, 1500);
 // list.forEach((elements, index) => {
 //   elements.addEventListener("click", function (event) {
 //     let id = elements.dataset.id;
@@ -47,11 +32,7 @@ setInterval(typeWriter, 1500);
 //     $(`#${id}`).fadeIn(800);
 //   });
 // });
-$(".btn").click(function () {
-  $(".input").toggleClass("active").focus;
-  $(this).toggleClass("animate");
-  $(".input").val("");
-});
+
 //create months array
 month[0] = "January";
 month[1] = "February";
@@ -118,7 +99,7 @@ $(document).ready(() => {
     preloader.removeClass("on");
 
     // console.log(`${uLat}`, `${uLon}`);
-    if (uLat == null || uLon == null ) {
+    if (uLat == null || uLon == null) {
       // alert("GPS not activated!");
       let error = $("#err");
       error.html("Please enable the GPS.");
@@ -315,7 +296,7 @@ $(document).ready(() => {
   navigator.geolocation.getCurrentPosition(success, error, getPosition);
 
   function error(err) {
-    if (uLat == null || uLon == null ) {
+    if (uLat == null || uLon == null) {
       let error = $("#err");
       error.html("Please enable the GPS.");
       popup.addClass("show");

@@ -1,6 +1,27 @@
 <script>
   let page = '<%=page%>'
 </script>
+
+<% if (page=="index") { %>
+  <script>
+    let i = 0;
+    let txt = "....";
+    let speed = 100;
+
+    let typeWriter = () => {
+      if (i == 0) document.getElementById("dots").innerHTML = "";
+      if (i < txt.length) {
+        document.getElementById("dots").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      } else {
+        i = 0;
+      }
+    };
+    typeWriter();
+    setInterval(typeWriter, 1500);
+  </script>
+<% } %>
 <script src="js/nav.js"></script>
 <script
   src="https://code.jquery.com/jquery-3.6.0.js"
@@ -11,6 +32,7 @@
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.0/Chart.min.js"></script> -->
 <script src="js/theme.js"></script>
 <% if (page=="index") { %>
+
   <script src="js/api.js"></script>
 <% } %>
 <% if (page=="search") { %>
