@@ -15,12 +15,12 @@ let time = $("#time");
 // time.hide();
 time.fadeOut(50);
 //show time
-let url = window.location.href;
-if (!url.includes("https")) {
-  url = url.replace("http", "https");
-  console.log(url);
-  window.location.href = url;
-}
+// let url = window.location.href;
+// if (!url.includes("https")) {
+//   url = url.replace("http", "https");
+//   console.log(url);
+//   window.location.href = url;
+// }
 $(".name").click(() => {
   $(".arrow").toggleClass("fa-angle-down fa-angle-up");
   // time.toggleClass("view hide");
