@@ -145,14 +145,15 @@ $(document).ready(() => {
 
           time.html(localtime.split(" ").join(", ") + " " + txt);
           let hour_time = localtime.substr(10, localtime.length);
-          let ctime = parseInt(hour_time.substr(0, 3));
           let humidity_val = info.humidity;
           let wind_val = info.wind_kph;
           let pressure_val = info.pressure_in;
           let note;
+          let ctime = parseInt(hour_time.substr(0, 3));
+          console.log(ctime);
           if (ctime > 5 && ctime < 12) note = "Morning";
-          else if (ctime > 12 && ctime < 5) note = "Afternoon";
-          else if (ctime >= 5 && ctime < 8) note = "Evening";
+          else if (ctime >= 12 && ctime < 17) note = "Afternoon";
+          else if (ctime >= 17 && ctime < 20) note = "Evening";
           else note = "Night";
           curr_notes.html(note);
           let description = info.condition.text;
