@@ -48,7 +48,7 @@ month[10] = "November";
 month[11] = "December";
 //show preloader
 let preloader = $("#container");
-preloader.addClass("on");
+// preloader.addClass("on");
 //set theme
 if (window.localStorage.theme == "light") {
   $("body").attr("class", "light");
