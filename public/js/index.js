@@ -90,6 +90,8 @@ $(document).ready(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       lng = position.coords.longitude;
       lat = position.coords.latitude;
+      alert(lat);
+      alert(lng);
       if (lng == null || lat == null) {
         // alert("GPS not activated!");
         let error = $("#err");
@@ -109,6 +111,8 @@ $(document).ready(() => {
       navigator.geolocation.getCurrentPosition((position) => {
         uLat = position.coords.latitude;
         uLon = position.coords.longitude;
+        alert(uLat);
+        alert(uLon);
         preloader.removeClass("on");
         popup.removeClass("show");
 
