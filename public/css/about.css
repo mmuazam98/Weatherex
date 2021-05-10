@@ -34,12 +34,14 @@
 #about .contact span a {
   color: var(--black);
 }
+#about .contact span {
+  font-size: 12px;
+}
 .contact {
+  text-align: center;
   margin-top: 50px;
 }
 .social-icons {
-  text-align: center;
-
   padding-left: 0;
   margin: 10px auto;
   list-style: none;
@@ -118,6 +120,11 @@
     display: block;
     margin-right: 0;
     font-weight: 600;
+  }
+}
+@media (max-width: 360px) {
+  #about {
+    padding: 20px 13px;
   }
 }
 @media (min-width: 552px) {
