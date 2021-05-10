@@ -1,8 +1,10 @@
 #about {
   position: relative;
   min-height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
 }
-#about svg {
+/* #about svg {
   fill: var(--white-bg);
   position: absolute;
   top: 40%;
@@ -16,4 +18,125 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+} */
+#about .heading:nth-child(2) {
+  margin-top: 30px;
+}
+#about .heading h2,
+#about .heading p,
+#about .heading a {
+  color: var(--black);
+}
+#about .heading p {
+  margin-top: 15px;
+}
+#about .contact span,
+#about .contact span a {
+  color: var(--black);
+}
+.contact {
+  margin-top: 50px;
+}
+.social-icons {
+  text-align: center;
+
+  padding-left: 0;
+  margin: 10px auto;
+  list-style: none;
+}
+.social-icons li {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.social-icons li.title {
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #96a2b2;
+  font-weight: 700;
+  font-size: 13px;
+}
+.social-icons a {
+  background-color: var(--white-bg);
+  color: var(--dark-grey);
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+  color: #fff;
+  background-color: #29aafe;
+}
+.social-icons.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px;
+}
+.social-icons a.facebook:hover {
+  background-color: #3b5998;
+}
+.social-icons a.twitter:hover {
+  background-color: #00aced;
+}
+
+.social-icons a.instagram:hover {
+  background-color: #da0255;
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.social-icons a.github:hover {
+  background-color: #000000;
+  color: white;
+}
+.social-icons a.codepen:hover {
+  background-color: #fff;
+  color: black;
+}
+.social-icons a.linkedin:hover {
+  background-color: #0e76a8;
+  color: white;
+}
+@media (max-width: 767px) {
+  .social-icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600;
+  }
+}
+@media (min-width: 552px) {
+  #about {
+    width: 65%;
+  }
+}
+@media (min-width: 768px) {
+  #about {
+    width: 55%;
+  }
+}
+@media (min-width: 992px) {
+  #about {
+    width: 40%;
+  }
+}
+@media (min-width: 1240px) {
+  #about {
+    width: 30%;
+  }
 }

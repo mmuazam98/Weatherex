@@ -7,10 +7,26 @@ The goal is to provide a simplistic, navigable website that shows the current te
 
 <p align="left">
 <a href="https://ibb.co/sqhc72h"><img src="https://i.ibb.co/SB2HSP2/1.png" width="43%" height="600" alt="1" border="0"></a> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-<a href="https://ibb.co/Wxp0tpX"><img src="https://i.ibb.co/VjpxmpG/2.png" width="43%" height="600" alt="2" border="0"></a> &ensp;&ensp;&ensp;&ensp;&ensp;
+<a href="https://ibb.co/Wxp0tpX"><img src="https://i.ibb.co/VjpxmpG/2.png" width="43%" height="600" alt="2" border="0"></a> &ensp;&ensp;&ensp;
 <a href="https://ibb.co/q9LC5t3"><img src="https://i.ibb.co/WFN0tb4/3.png" width="43%" height="600" alt="3" border="0"></a> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
 <a href="https://ibb.co/3TKCfLV"><img src="https://i.ibb.co/tHRJZWn/4.png" width="43%" height="600" alt="4" border="0"></a> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
 </p>
+
+## Brief Description
+
+A website that displays weather conditions from a chosen city using information retrieved by AJAX from [WeatherAPI](https://weatherapi-com).
+The weather information displayed includes:
+
+- current temperature
+- the day's high temperature
+- the day's low temperature
+- real feel
+- current weather condition descriptions
+- current wind speed, humidity etc.
+- surise time
+- sunset time
+- hourly forecast
+- daily forecast
 
 ## Technologies Used
 
