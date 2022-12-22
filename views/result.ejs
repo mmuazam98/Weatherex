@@ -1,12 +1,12 @@
-<%- include("partials/header") %> 
-<%- include("partials/nav") %> 
+<%- include("partials/header") %>
+<%- include("partials/nav") %>
 <section id="home" class="section">
     <!-- <img src="moon.svg" alt="" /> -->
     <!-- heading  -->
-    <% let location = result.location,data=result.current,forecast=result.forecast%> 
+    <% let location = result.location,data=result.current,forecast=result.forecast%>
     <div class="name">
       <span id="name"><%= location.name %></span>, <span id="country"><%= location.region %></span>
-      <i class="far fa-angle-down arrow" id="show-time" aria-hidden="true"></i>
+      <i class="fa fa-angle-down arrow" id="show-time" aria-hidden="true"></i>
       <p id="time" class="hide"><%= location.localtime %> </p>
     </div>
     <!-- main container  -->
@@ -84,4 +84,4 @@
      forecastThree.push(JSON.parse(fcst3[i]));
      console.log(fore);
   </script>
-<%- include("partials/footer") %> 
+<%- include("partials/footer") %>

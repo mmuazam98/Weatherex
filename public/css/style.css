@@ -6,11 +6,7 @@
     rgba(37, 99, 219, 1) 0%,
     rgba(233, 45, 181, 1) 89.9%
   ); */
-  --main: radial-gradient(
-    circle 654px at 0.6% 48%,
-    rgba(12, 170, 255, 1) 0%,
-    rgba(151, 255, 129, 1) 86.3%
-  );
+  --main: radial-gradient(circle 654px at 0.6% 48%, rgba(12, 170, 255, 1) 0%, rgba(151, 255, 129, 1) 86.3%);
   --white: #fff;
   --bg: rgb(230, 230, 230);
   --white-bg: #fff;
@@ -30,11 +26,7 @@
     rgba(37, 99, 219, 1) 0%,
     rgba(233, 45, 181, 1) 89.9%
   ); */
-  --main: radial-gradient(
-    circle 654px at 0.6% 48%,
-    rgba(12, 170, 255, 1) 0%,
-    rgba(151, 255, 129, 1) 86.3%
-  );
+  --main: radial-gradient(circle 654px at 0.6% 48%, rgba(12, 170, 255, 1) 0%, rgba(151, 255, 129, 1) 86.3%);
   --white: #000;
   --bg: #162447;
   --grey: rgba(236, 236, 236, 0.692);
@@ -48,7 +40,7 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
-  transition: background 0.6s, color 0.6s;
+  transition: background 0.3s, color 0.3s;
 }
 html {
   /* scrollbar-color: #7c7c7c #303030; */
@@ -73,13 +65,7 @@ body {
   width: 100vw;
   overflow: hidden !important;
   position: fixed;
-  background: linear-gradient(
-    231deg,
-    var(--bg),
-    var(--white-bg),
-    var(--bg),
-    var(--white-bg)
-  );
+  background: linear-gradient(231deg, var(--bg), var(--white-bg), var(--bg), var(--white-bg));
   background-size: 1600% 1600%;
   z-index: 999;
   margin-top: -20px;
@@ -319,7 +305,7 @@ body {
   display: block;
   line-height: 75px;
   text-align: center;
-  transition: 0.3s;
+  transition: 0.1s !important;
 }
 .navigation ul li.active a .icon {
   color: var(--dark-grey);

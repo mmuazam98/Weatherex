@@ -2,7 +2,6 @@ const Router = require("express").Router();
 const request = require("request");
 
 Router.get("/", (req, res) => {
-  // console.log(req);
   res.render("index", { page: "index" });
 });
 
@@ -21,7 +20,7 @@ Router.post("/search", (req, res) => {
     url: "https://weatherapi-com.p.rapidapi.com/forecast.json",
     qs: { q: `${req.body.query}`, days: "3" },
     headers: {
-      "x-rapidapi-key": "55e00f5629msha9991ea81532a93p18a9e0jsnc0f29c202338",
+      "x-rapidapi-key": process.env.RAPID_API_KEY,
       "x-rapidapi-host": "weatherapi-com.p.rapidapi.com",
       useQueryString: true,
     },
